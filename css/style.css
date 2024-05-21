@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background-image: url('https://s1.eestatic.com/2020/06/03/curiosidades/curiosidades_494961313_153077108_1706x960.jpg');
+}
+
+.bg-CAVAME{
+    background-color: black;
+    color: white;
+}
+
+header {
+  margin-top: 3em;
+  text-align: center;
+  color: white;
+  position: fixed; 
+  z-index: 3;
+}
+
+header h1 {
+  font-size: 2em;
+  font-weight: 900;
+  position: fixed; 
+  z-index: 3;
+}
+
+#container3D canvas {
+  width: 100vw !important;
+  height: 100vh !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* Contenedor del joystick */
+#joystick-container {
+  position: fixed;
+  bottom: 60px; /* Aumentar el margen desde la parte inferior */
+  left: 60px;  /* Aumentar el margen desde la parte izquierda */
+  width: 150px; /* Ajustar el tamaño para más espacio */
+  height: 150px;
+  background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  border-radius: 50%; /* Forma circular */
+  z-index: 10; /* Para mantenerlo por encima de otros elementos */
+  display: none; /* Oculto por defecto */
+}
+
+/* Joystick dentro del contenedor */
+#joystick {
+  position: absolute;
+  top: 50%; /* Centrado verticalmente */
+  left: 50%; /* Centrado horizontalmente */
+  transform: translate(-50%, -50%); /* Para mantenerlo centrado */
+  width: 70px; /* Tamaño ligeramente más grande */
+  height: 70px;
+  background: rgba(255, 255, 255, 0.7); /* Fondo semitransparente */
+  border: 2px solid rgba(255, 255, 255, 1); /* Borde blanco */
+  border-radius: 50%; /* Forma circular */
+  z-index: 11; /* Un poco más alto para asegurarse de que esté visible */
+}
+
+/* Mostrar el joystick solo en dispositivos móviles */
+@media (max-width: 1280px) {
+  #joystick-container {
+    display: block; /* Visible solo en dispositivos móviles */
+  }
+}
